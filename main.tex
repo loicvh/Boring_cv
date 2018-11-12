@@ -1,0 +1,144 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{tikz}
+
+
+
+
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+%\usepackage[french]{babel}
+
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+%-----------------------------------------------------------
+
+
+\newcommand{\ressubheading}[3]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingbis}[3]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1}  & #2 \\
+		\textit{#3} & \\
+\end{tabular*}}
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Loïc Van Hoorebeeck} & \textbf{0475.36.75.28} \\
+ & loicvanhoorebeeck@gmail.com \\
+17, Rue de l'Argentine\\
+1310, La Hulpe\\
+Belgium &  \\
+\end{tabular*}
+\\
+
+\resheading{Education}
+
+
+\begin{itemize}
+%\item \ressubheading{Université catholique de Louvain}{Master in Mathematical Engineering}{2016 - present}
+\item \ressubheadingbis{Université Catholique de Louvain}{Master in Applied Mathematics -  with great honor}{2016 - 2018}
+\item \ressubheadingbis{Karlsruher Institut für Technologie}{Erasmus in the Electrical Engineering faculty}{September 2017 - March 2018}
+\item \ressubheadingbis{Université Catholique de Louvain}{Bachelor in Civil Engineering -  with great honor}{2013 - 2016}
+\begin{itemize}
+	\resitem{Specialisation in Applied Mathematics and \\ Electrical engineering}
+\end{itemize}
+
+\item \ressubheadingbis{Martin V High School}{Graduated - with great honor}{2007 - 2013}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional\,Experiences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{itemize}
+  \item \ressubheadingbis{Tutor at the UCLouvain}{Educational support to 1st and 3rd year }{2015 - 2018}
+  engineering students in the following fields: physics, chemistry, mathematics and optimization.
+\end{itemize}
+
+\resheading{Leisure\,Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item \ressubheadingbis{Chief of a scout group}{In charge of the entertainment of 36 children from 6 to 11}{2012-2017}
+ \item \ressubheadingbis{Drummer in a band}{Creator and member of The Callaways.}{2010-2015}
+  \end{itemize}
+
+\resheading{Achievements}
+
+\begin{itemize}
+\item \ressubheadingbis{Belgian finale of the Emergenza festivale}{}{2015}
+As a member of The Callaways, I performed on the multiple rounds of the Emergenza festival until the finale taking place at Botanique - Orangerie in Brussels.
+%\item \ressubheading{Online courses}{Attented online courses}{}
+%\begin{itemize}
+%\item Paradigms of Computer Programming - Fundamentals (edx)
+%\item Paradigms of Computer Programming - Abstraction and Concurrency (edx)
+%\end{itemize}
+\end{itemize}
+
+
+\end{document}
+
